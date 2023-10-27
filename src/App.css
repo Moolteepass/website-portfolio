@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+
+:root {
+  /* Variables */
+  --primary-font: "Montserrat", sans-serif;
+  --primary-colour: rgb(11, 36, 65);
+  --secondary-colour: rgb(3, 24, 48);
+
+  /* Root styles */
+  font-family: var(--primary-font);
+  font-weight: 500;
+}
+
+/* Reset default styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--secondary-colour);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  padding-left: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo p {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger-menu {
+  font-size: 60px;
+  display: none;
+  padding-right: 20px;
+}
+
+/* Home */
+.home {
+  background: var(--primary-colour);
+  width: 100%;
+  height: calc(100vh - 90px);
+}
+
+/* Different Screen Sizes */
+/* Styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  .navbar {
+    height: 90px;
+  }
+
+  .logo p {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-container {
+    display: none;
+  }
+
+  .clicked {
+    margin: auto;
+    background: var(--secondary-colour);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .navigation {
+    margin: auto;
+  }
+
+  .logo img {
+    width: 5rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .navigation li {
+    font-size: 3rem;
+    padding-bottom: 80px;
+    padding-right: 0px;
+    font-weight: 400;
+  }
+
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 3rem;
+    z-index: 2;
+  }
+}
